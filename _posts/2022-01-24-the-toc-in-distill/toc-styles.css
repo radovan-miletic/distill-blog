@@ -6,7 +6,7 @@ d-article {
     text-indent: 25px;
   }
 
-/* ScrollSpy active styles (see JS tab for activation) */
+/* ScrollSpy active styles (see JAVASCRIPT tab for activation) */
 .d-contents nav ul li.active > a { 
     font-weight: bold;  
     /* border-left: 1px solid #2780e3; */
@@ -22,38 +22,33 @@ d-article {
 #TOC {
   opacity: 1;
   position: fixed;
-  /* background-color: lightblue; */
   left: calc(7%);
   top: calc(5.5%);
   /* width: 20%; */
   max-width: 260px;
   max-height: 85%;
   overflow-y: auto;
-  background: white;       /* optional */
+  background: white;            /* optional */
   backdrop-filter: blur(10px);  /* optional */
-  padding: 10px;           /* optional */
+  padding: 10px;                /* optional */
   /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.5s; 
-  /* transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms; */
   /* border-radius: 1px; */
+  transition: all 0.5s;   
   z-index: 999;
-  /* margin-top: -423px; */
-  /* margin-left: -200px; */ 
   }
 
 #TOC.hide { 
   opacity: 0;
   transition: visibility 0s linear 0.5s, opacity 0.5s;
-  /* transition: opacity 250ms ease-in, visibility 0ms ease-in 0ms; */
   }
 
 #TOC:hover {
   opacity: 1;
-  transition: all 0.5s;        /* optional */
+  transition: all 0.5s;         /* optional */
   }
 
-/* Hide the ToC when resized to mobile or tablet:  480px, 768px, 900px */
+/* Hide the TOC when resized to mobile or tablet:  480px, 768px, 900px */
 @media screen and (max-width: 1000px) {
 #TOC {
     position: relative;

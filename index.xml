@@ -7,19 +7,19 @@
     <description>𝟷0𝟷 𝚗𝚘𝚝𝚎𝚜 𝚘𝚗 🅡
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>A poor man's TOC in {distill}</title>
-      <dc:creator>Radovan Miletic</dc:creator>
+      <dc:creator>Radovan Miletić</dc:creator>
       <link>https://github.com/radovan-miletic/distill-blog/posts/2022-01-24-the-toc-in-distill</link>
-      <description>A floating Table of Contents (TOC) in {distill} in a fixed position with Scrolling Active States and Toggle (show/hide) button.</description>
+      <description>A floating Table of Contents (TOC) in {distill} in fixed position with Scrolling Active States and Toggle (show/hide) button.</description>
       <category>R Markdown</category>
       <category>Distill</category>
       <category>CSS</category>
       <category>JavaScript</category>
       <category>HTML</category>
       <guid>https://github.com/radovan-miletic/distill-blog/posts/2022-01-24-the-toc-in-distill</guid>
-      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
       <media:content url="https://github.com/radovan-miletic/distill-blog/posts/2022-01-24-the-toc-in-distill/images/a-poor-mans-table.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
