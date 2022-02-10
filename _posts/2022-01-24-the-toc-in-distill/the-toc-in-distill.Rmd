@@ -70,10 +70,10 @@ Hope the crumbs below will be inspirational to someone. You may find them [here]
 
 ### Floating TOC in fixed position  
 
-Judging by the {distill} issues [16](https://github.com/rstudio/distill/issues/16), [341](https://github.com/rstudio/distill/issues/341), [366](https://github.com/rstudio/distill/issues/366), and the Stack Overflow question [here](https://stackoverflow.com/questions/67323162/floating-toc-in-distill-for-r) it seems that there is a genuine need for some kind of a floating TOC in {distill}.  
+Judging by the {[distill](https://github.com/rstudio/distill)} issues [16](https://github.com/rstudio/distill/issues/16), [341](https://github.com/rstudio/distill/issues/341), [366](https://github.com/rstudio/distill/issues/366), and the Stack Overflow question [here](https://stackoverflow.com/questions/67323162/floating-toc-in-distill-for-r) it seems that there is a genuine need for some kind of a floating TOC in {distill}.  
 
 In his [comment](https://github.com/rstudio/distill/issues/16#issuecomment-692207662), J.J. Allaire (Founder and CEO of RStudio, and one of the [authors](https://pkgs.rstudio.com/distill/authors.html) of the {distill}) summarizes the problem:  
-- any change in {distill} should be linked to [distll.pub](https://distill.pub/about/) article;  
+- any change in {distill} should be linked to [distll.pub](https://github.com/distillpub/template) article;  
 - floating TOC in "fixed position is tricky w/r/t to figures that extend into the sidebar (quite common w/ distill)";  
 
 An optimal solution can be found within [Quarto](https://quarto.org/docs/websites/website-navigation.html) publishing system. You may try scrolling up and down and observe the collapsible sidebar navigation. HTML documents rendered with Quarto use Bootstrap 5 by default, which is not the case with distill.pub.
