@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![Figure from https://www.wikigallery.org/wiki/painting_366127/William-Harris-Weatherhead/Crumbs-From-A-Poor-Man's-Table. William Harris Weatherhead (British 1843-1903), CRUMBS FROM A POOR MAN'S TABLE (Image)](images/painting1.jpg){width=70% .external}
+![Image from https://www.wikigallery.org/wiki/painting_366127/William-Harris-Weatherhead/Crumbs-From-A-Poor-Man's-Table. William Harris Weatherhead (British 1843-1903), CRUMBS FROM A POOR MAN'S TABLE](images/painting1.jpg){width=70% .external}
 
 ## Crumbs from a poor man's Table of Contents (TOC)
 
