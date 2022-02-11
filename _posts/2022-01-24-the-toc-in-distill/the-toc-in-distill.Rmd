@@ -25,7 +25,7 @@ output:
     css: toc-styles.css
     self_contained: false
 # creative_commons: CC BY
-preview: images/a-poor-mans-table.jpg
+preview: images/painting1.jpg
 ---
 
 <!-- TOC JAVASCRIPT ELEMENTS -->
@@ -64,7 +64,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![Image from https://www.wikigallery.org/wiki/painting_366127/William-Harris-Weatherhead/Crumbs-From-A-Poor-Man's-Table. William Harris Weatherhead (British 1843-1903), CRUMBS FROM A POOR MAN'S TABLE](images/painting1.jpg){width=70% .external}
 
-## Crumbs from a poor man's table
+## Crumbs from a poor man's table (of contents)
 
 You may find the crumbs [here](https://github.com/radovan-miletic/distill-blog/tree/main/_posts/2022-01-24-the-toc-in-distill): `toc-styles.css` and `the-toc-in-distill.Rmd`. Hope they will be inspirational to someone.  
 
