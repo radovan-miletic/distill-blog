@@ -2,8 +2,6 @@
 title: "Radovan Miletić"
 image: "radovan.jpg"
 links:
-  - label: Twitter
-    url: "https://twitter.com/RadovanMiletic"
   - label: Stack Overflow
     url: "https://stackoverflow.com/users/12561476/radovan-miletić"
   - label: RStudio Community

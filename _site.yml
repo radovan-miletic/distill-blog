@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - icon: fa fa-twitter
+      href: https://twitter.com/RadovanMiletic
   source_url: https://github.com/radovan-miletic/distill-blog
   search: false
 base_url: https://github.com/radovan-miletic/distill-blog
