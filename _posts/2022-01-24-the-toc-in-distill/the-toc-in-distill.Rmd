@@ -1,7 +1,7 @@
 ---
 title: "A poor man's TOC in {distill}"
 description: |
-  A floating Table of Contents (TOC) in {distill} in fixed position with Scrolling Active States and Toggle (show/hide) button.
+  A floating Table of Contents (TOC) in {distill} in fixed position with Toggle (show/hide) button and Scrolling Active States.
 author:
   - first_name: "Radovan"
     last_name: "Miletić"
@@ -152,56 +152,6 @@ d-article {
 ::: 
 :::::  
 
-### Scrolling Active States  
-
-::::: {.panelset}
-::: {.panel}
-#### CSS elements
-
-``` {.css}
-/* ScrollSpy active styles (see JAVASCRIPT tab for activation) */
-.d-contents nav ul li.active > a { 
-    font-weight: bold;  
-    /* border-left: 1px solid #2780e3; */
-    color: #0f2e3d !important;
-  }
-
-/* 💡 This small transition makes setting of the active state smooth */
-.d-contents nav a {
-	  transition: all 0.1s ease-in-out;
-  }
-```
-::: 
-
-::: {.panel}
-#### JAVASCRIPT elements
-
-``` {.js}
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const id = entry.target.getAttribute('id');
-      if (entry.intersectionRatio > 0) {
-        document.querySelector(`[href="#${id}"]`).parentElement.classList.add('active');
-      } else {
-        document.querySelector(`[href="#${id}"]`).parentElement.classList.remove('active');
-      }
-    });
-  });
-
-  // Track all headings that have an `id` applied
-  document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').forEach((h1, h2, h3, h4, h5, h6) => {
-    observer.observe(h1, h2, h3, h4, h5, h6);
-  });
-  
-});
-</script>
-```
-::: 
-:::::
-
 ### Toggle (show/hide) button  
 
 ::::: {.panelset}
@@ -257,7 +207,57 @@ title="Toggle (Hide/Show) Table of Contents"
 onclick="toggle()" style="padding:7px; border: 0px;"/>
 ```
 :::  
-:::::  
+::::: 
+
+### Scrolling Active States  
+
+::::: {.panelset}
+::: {.panel}
+#### CSS elements
+
+``` {.css}
+/* ScrollSpy active styles (see JAVASCRIPT tab for activation) */
+.d-contents nav ul li.active > a { 
+    font-weight: bold;  
+    /* border-left: 1px solid #2780e3; */
+    color: #0f2e3d !important;
+  }
+
+/* 💡 This small transition makes setting of the active state smooth */
+.d-contents nav a {
+	  transition: all 0.1s ease-in-out;
+  }
+```
+::: 
+
+::: {.panel}
+#### JAVASCRIPT elements
+
+``` {.js}
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if (entry.intersectionRatio > 0) {
+        document.querySelector(`[href="#${id}"]`).parentElement.classList.add('active');
+      } else {
+        document.querySelector(`[href="#${id}"]`).parentElement.classList.remove('active');
+      }
+    });
+  });
+
+  // Track all headings that have an `id` applied
+  document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').forEach((h1, h2, h3, h4, h5, h6) => {
+    observer.observe(h1, h2, h3, h4, h5, h6);
+  });
+  
+});
+</script>
+```
+::: 
+:::::
 
 ## Layouts
 
