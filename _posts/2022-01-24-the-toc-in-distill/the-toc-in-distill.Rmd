@@ -71,12 +71,12 @@ You may find the crumbs [here](https://github.com/radovan-miletic/distill-blog/t
 Judging by the {[distill](https://github.com/rstudio/distill)} issues [16](https://github.com/rstudio/distill/issues/16), [341](https://github.com/rstudio/distill/issues/341), [366](https://github.com/rstudio/distill/issues/366), [420](https://github.com/rstudio/distill/issues/420), and the Stack Overflow [question](https://stackoverflow.com/questions/67323162/floating-toc-in-distill-for-r) it seems that there is a genuine need for some kind of a "floating TOC on the side" in {distill}.  
 
 In his [comment](https://github.com/rstudio/distill/issues/16#issuecomment-692207662), J.J. Allaire summarizes the problem:  
-- any change in {distill} should be linked to [distll.pub](https://github.com/distillpub/template) web framework; 
-- floating TOC on the side would be tricky to implement due to specific layout "figures that extend into the sidebar (quite common w/ distill)";  
+- any change in {distill} should be linked to [distll.pub](https://github.com/distillpub/template) web framework,  
+- floating TOC on the side would be tricky to implement due to specific layout "figures that extend into the sidebar (quite common w/ distill)".  
 
 An optimal solution can be found within [Quarto](https://quarto.org/docs/websites/website-navigation.html) publishing system. You may try scrolling up and down and observe the collapsible sidebar navigation. HTML documents rendered with Quarto use Bootstrap 5 by default, which is not the case with distill.pub.
 
-While we wait for a solution, you may try "a poor man's TOC" hacky patchwork that I came up with for my use case (applied to single article).  
+While we wait for a solution, you may may feel tempted to try "a poor man's TOC" hacky patchwork that I came up with for my use case (applied to single article).  
 
 ### Floating TOC in fixed position  
 
@@ -111,6 +111,7 @@ output:
 #### CSS elements
 
 ``` {.css}
+/* This hack is needed to temporary disable the predefined layout style */
 d-article {
     contain: none;
   }
@@ -125,9 +126,9 @@ d-article {
   max-width: 260px;
   max-height: 85%;
   overflow-y: auto;
-  background: white;            /* optional */
-  backdrop-filter: blur(10px);  /* optional */
-  padding: 10px;                /* optional */
+  background: white;            /* Optional, remove to enable the blur filter (just for fun). */
+  backdrop-filter: blur(10px);  /* Optional, wouldn't not work with Firefox browser. */
+  padding: 10px;                /* Optional */
   /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
   border: 1px solid rgba(0, 0, 0, 0.1);
   /* border-radius: 1px; */
@@ -136,7 +137,6 @@ d-article {
   }
 
 /* Hide the TOC when resized to mobile or tablet:  480px, 768px, 900px */
-/* @media(min-width: 1200px) */
 @media screen and (max-width: 1000px) {
 #TOC {
     position: relative;
@@ -168,7 +168,7 @@ d-article {
   transition: visibility 0s linear 0.5s, opacity 0.5s;
   }
 
-/* Optional */
+/* Optional, remove to disable the hover effect */
 #TOC:hover {
   opacity: 1;
   transition: all 0.5s;
@@ -210,6 +210,13 @@ onclick="toggle()" style="padding:7px; border: 0px;"/>
 ::::: 
 
 ### Scrolling Active States  
+
+It was Rich Pauloo (author of Stack Overflow question mentioned above) who pointed out to a scrolling active state implementation, "such that the TOC responds to the header the user is currently on".
+
+All credits for "scrolling active state" lightweight solution goes to Bramus Van Damme (see his [tutorial](https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/#step3)) and Chris Coyier (his [tutorial](https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/)) and to the powerful [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).  
+
+I just made slight changes needed to track all headings that have an `id` applied.  
+Please note that `IntersectionObserver` will only observe changes in document's viewport, in our case - headings currently being displayed on the screen.
 
 ::::: {.panelset}
 ::: {.panel}
