@@ -18,4 +18,7 @@ collections:
   posts:
     share: [twitter, linkedin]
     feed_items_max: false
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    includes:
+      in_header: utterances.html

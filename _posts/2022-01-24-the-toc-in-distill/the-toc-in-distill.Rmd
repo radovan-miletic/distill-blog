@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <!-- TOC HTML ELEMENTS -->
-<input type="button" class="d-article-with-toc" id="TOC" value="&#x2630" title="Toggle (Hide/Show) Table of Contents" onclick="toggle()" style="padding:7px; border: 0px;"/>
+<input type="button" class="d-article-with-toc" id="TOC" value="&#x2630" title="Toggle (Hide/Show) Table of Contents" alt="Toggle button for hiding/showing the Table of Contents" onclick="toggle()" style="padding:7px; border: 0px;"/>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -95,8 +95,8 @@ title: "Post title"
 description: |
   Description
 author:
-  - first_name: "John/Jane"
-    last_name: "Doe"
+  - first_name: "R"
+    last_name: "M"
 output:
   distill::distill_article:
     toc: true
@@ -194,11 +194,9 @@ You may disable the hover effect, if preferred.
 #### JAVASCRIPT elements
 
 ``` {.js}
-<script>
 function toggle () {
   document.getElementById("TOC").classList.toggle("hide");
 };
-</script>
 ```
 ::: 
 
@@ -245,7 +243,6 @@ Please note that `IntersectionObserver` will only observe changes in document's 
 #### JAVASCRIPT elements
 
 ``` {.js}
-<script>
 window.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver(entries => {
@@ -265,7 +262,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   
 });
-</script>
 ```
 ::: 
 :::::
