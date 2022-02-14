@@ -77,6 +77,7 @@ In his [comment](https://github.com/rstudio/distill/issues/16#issuecomment-69220
 An optimal solution can be found within [Quarto](https://quarto.org/docs/websites/website-navigation.html){target="_blank"} publishing system. You may try scrolling up and down and observe the collapsible sidebar navigation. HTML documents rendered with Quarto use Bootstrap 5 by default, which is not the case with distill.pub.
 
 While we wait for a solution, you may feel tempted to try "a poor man's TOC" that I came up with for my use case (applied to single article).  
+Let me know how it goes!  
 
 ### Floating TOC in fixed position  
 
