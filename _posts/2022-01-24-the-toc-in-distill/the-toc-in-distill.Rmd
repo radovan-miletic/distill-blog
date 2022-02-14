@@ -62,19 +62,19 @@ window.addEventListener('DOMContentLoaded', () => {
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![Image from https://www.wikigallery.org/wiki/painting_366127/William-Harris-Weatherhead/Crumbs-From-A-Poor-Man's-Table. William Harris Weatherhead (British 1843-1903), CRUMBS FROM A POOR MAN'S TABLE](images/painting1.jpg){width=70% .external}
+![Image from https://www.wikigallery.org/wiki/painting_366127/William-Harris-Weatherhead/Crumbs-From-A-Poor-Man's-Table. William Harris Weatherhead (British 1843-1903), CRUMBS FROM A POOR MAN'S TABLE](images/painting1.jpg){target="_blank" width=70% .external}
 
 ## Crumbs from a poor man's table (of contents)
 
-You may find the crumbs [here](https://github.com/radovan-miletic/distill-blog/tree/main/_posts/2022-01-24-the-toc-in-distill): `toc-styles.css` and `the-toc-in-distill.Rmd`. Hope they will be inspirational to someone.  
+You may find the crumbs [here](https://github.com/radovan-miletic/distill-blog/tree/main/_posts/2022-01-24-the-toc-in-distill){target="_blank"}: `toc-styles.css` and `the-toc-in-distill.Rmd`. Hope they will be inspirational to someone.  
 
-Judging by the {[distill](https://github.com/rstudio/distill)} issues [16](https://github.com/rstudio/distill/issues/16), [341](https://github.com/rstudio/distill/issues/341), [366](https://github.com/rstudio/distill/issues/366), [420](https://github.com/rstudio/distill/issues/420), and the Stack Overflow [question](https://stackoverflow.com/questions/67323162/floating-toc-in-distill-for-r) it seems that there is a genuine need for some kind of a "floating TOC on the side" in {distill}.  
+Judging by the {[distill](https://github.com/rstudio/distill){target="_blank"}} issues [16](https://github.com/rstudio/distill/issues/16){target="_blank"}, [341](https://github.com/rstudio/distill/issues/341){target="_blank"}, [366](https://github.com/rstudio/distill/issues/366){target="_blank"}, [420](https://github.com/rstudio/distill/issues/420){target="_blank"}, and the Stack Overflow [question](https://stackoverflow.com/questions/67323162/floating-toc-in-distill-for-r){target="_blank"} it seems that there is a genuine need for some kind of a "floating TOC on the side" in {distill}.  
 
-In his [comment](https://github.com/rstudio/distill/issues/16#issuecomment-692207662), J.J. Allaire summarizes the problem:  
-- any change in {distill} should be linked to [distll.pub](https://github.com/distillpub/template) web framework,  
+In his [comment](https://github.com/rstudio/distill/issues/16#issuecomment-692207662){target="_blank"}, J.J. Allaire summarizes the problem:  
+- any change in {distill} should be linked to [distll.pub](https://github.com/distillpub/template){target="_blank"} web framework,  
 - floating TOC on the side would be tricky to implement due to specific layout "figures that extend into the sidebar (quite common w/ distill)".  
 
-An optimal solution can be found within [Quarto](https://quarto.org/docs/websites/website-navigation.html) publishing system. You may try scrolling up and down and observe the collapsible sidebar navigation. HTML documents rendered with Quarto use Bootstrap 5 by default, which is not the case with distill.pub.
+An optimal solution can be found within [Quarto](https://quarto.org/docs/websites/website-navigation.html){target="_blank"} publishing system. You may try scrolling up and down and observe the collapsible sidebar navigation. HTML documents rendered with Quarto use Bootstrap 5 by default, which is not the case with distill.pub.
 
 While we wait for a solution, you may feel tempted to try "a poor man's TOC" that I came up with for my use case (applied to single article).  
 
@@ -110,7 +110,7 @@ output:
 ::: {.panel}
 #### CSS elements
 
-You may disable the [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index?) (previous section). If this is your preference, TOC will go underneath the figures.
+If you want to place the TOC below the figures, you need to disable the [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index?){target="_blank"}.
 
 ``` {.css}
 /* This hack is needed to temporary disable the predefined layout style */
@@ -160,7 +160,7 @@ d-article {
 ::: {.panel}  
 #### CSS elements
 
-You may disable the hover effect.
+You may disable the hover effect, if preferred.
 
 ``` {.css}
 .d-contents nav h3 {
@@ -217,7 +217,7 @@ onclick="toggle()" style="padding:7px; border: 0px;"/>
 
 It was Rich Pauloo (author of Stack Overflow question mentioned above) who pointed out to a scrolling active state implementation, "such that the TOC responds to the header the user is currently on".
 
-All credits for "scrolling active state" lightweight solution goes to Bramus Van Damme (see his [tutorial](https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/#step3)) and Chris Coyier (his [tutorial](https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/)) and to the powerful [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).  
+All credits for "scrolling active state" lightweight solution goes to Bramus Van Damme (see his [tutorial](https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/#step3){target="_blank"}) and Chris Coyier (his [tutorial](https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/){target="_blank"}) and to the powerful [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API){target="_blank"}.  
 
 I just made slight changes needed to track all headings that have an `id` applied.  
 Please note that `IntersectionObserver` will only observe changes in document's viewport, in our case - headings currently being displayed on the screen.
