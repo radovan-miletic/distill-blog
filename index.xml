@@ -7,10 +7,10 @@
     <description>𝙻𝚒𝚗𝚐𝚞𝚊𝚓𝚊🅡
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>A poor man's TOC in {distill}</title>
-      <dc:creator>Radovan Miletic</dc:creator>
+      <dc:creator>Radovan Miletić</dc:creator>
       <link>https://github.com/radovan-miletic/distill-blog/posts/2022-01-24-the-toc-in-distill</link>
       <description>A floating Table of Contents (TOC) in {distill} in fixed position with Toggle (show/hide) button and Scrolling Active States.</description>
       <category>R Markdown</category>
@@ -19,7 +19,7 @@
       <category>JavaScript</category>
       <category>HTML</category>
       <guid>https://github.com/radovan-miletic/distill-blog/posts/2022-01-24-the-toc-in-distill</guid>
-      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       <media:content url="https://github.com/radovan-miletic/distill-blog/posts/2022-01-24-the-toc-in-distill/images/painting1.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
